@@ -112,6 +112,8 @@ header {
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--main-text-color);
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-item + .header-contact-item {
@@ -129,6 +131,8 @@ header {
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--secondary-text-color);
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-item {
@@ -208,6 +212,8 @@ header {
 	border-radius: 4px;
 	border: none;
 	cursor: pointer;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -353,6 +359,7 @@ header {
 
 	border-radius: 50%;
 	color: #afb1b8;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialmedia:hover,
@@ -384,6 +391,8 @@ header {
 	color: var(--icon-color);
 	border: 1px solid #afb1b8;
 	border-radius: 4px;
+
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -465,6 +474,8 @@ header {
 
 	color: var(--white-text);
 	background-color: rgba(255, 255, 255, 0.1);
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-link:hover,
@@ -556,6 +567,9 @@ header {
 	border: none;
 	border-radius: 4px;
 	padding: 6px 22px;
+
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
@@ -592,6 +606,7 @@ header {
 /* ---СІТКА ДРУГИЙ СПОСІБ--- */
 .portfolio-item {
 	min-width: 370px;
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:not(:nth-child(3n)) {
@@ -617,12 +632,15 @@ header {
 
 .info-thumb {
 	position: relative;
+	overflow: hidden;
 }
 
 .portfolio-info {
 	position: absolute;
 	left: 0;
 	top: 0;
+
+	transform: translateY(100%);
 
 	width: 370px;
 	padding: 63px 24px;
@@ -633,6 +651,8 @@ header {
 	color: var(--white-text);
 
 	opacity: 0;
+
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info-thumb::before {
@@ -641,16 +661,20 @@ header {
 	top: 0;
 	left: 0;
 
+	transform: translateY(100%);
+
 	width: 100%;
 	height: 100%;
 	background-color: rgba(33, 150, 243, 0.9);
 
 	opacity: 0;
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card:hover .info-thumb::before,
 .portfolio-card:hover .portfolio-info {
 	opacity: 1;
+	transform: translateY(0);
 }
 
 .portfolio-descr {
