@@ -488,6 +488,11 @@ header {
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
+.backdrop.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+}
+
 .modal {
 	position: absolute;
 	top: 50%;
@@ -496,7 +501,30 @@ header {
 
 	min-width: 528px;
 	min-height: 581px;
+	color: var(--black-logo-color);
 	background-color: var(--white-bg);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+}
+
+.close-btn {
+	position: absolute;
+	top: 17px;
+	right: 17px;
+
+	width: 30px;
+	height: 30px;
+	background-color: var(--white-bg);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.close-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 /* --------- */
